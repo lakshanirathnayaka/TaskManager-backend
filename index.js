@@ -5,7 +5,7 @@ const pool = require("./db");
 const bcrypt = require("bcrypt");
 const { types } = require("pg");
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = process.env.SECRET_KEY ;
+const SECRET_KEY = process.env.SECRET_KEY||5000;
 
 
 // Fix: Prevent pg from converting DATE columns to JS Date objects (which causes timezone shifts)
