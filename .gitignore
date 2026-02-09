@@ -1,0 +1,13 @@
+# Node modules (installed dependencies)
+node_modules/
+
+# Environment variables (do NOT push secrets)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional system files
+.DS_Store
