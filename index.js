@@ -156,10 +156,9 @@ app.put("/tasks/:task_id", authenticateToken, async (req, res) => {
 });
 
 // SIGNUP
-app.post("/signup", authenticateToken, async (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
-    const { user_id } = req.user;
-    const { task_name, location_name, task_date, task_time, completed } = req.body;
+    const { user_name, email, password } = req.body;
 
     const userCheck = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
     if (userCheck.rows.length > 0) {
